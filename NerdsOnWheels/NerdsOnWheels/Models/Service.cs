@@ -11,8 +11,11 @@ namespace NerdsOnWheels.Models
         [Key]
         public int ID { get; set; }
 
+        [Required]
         [Display(Name = "What's your issue?")]
         public string AssistanceRequestType { get; set; }
+
+        public bool TicketStatus { get; set; }
 
 
         [DataType(DataType.Date)]

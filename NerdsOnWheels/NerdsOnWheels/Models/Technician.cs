@@ -10,10 +10,21 @@ namespace NerdsOnWheels.Models
     {
         [Key]
         public int ID { get; set; }
+
+        [Required]
+        [Display(Name = "First Name")]
         public string FirstName { get; set; }
+
+        [Required]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
+      
         public string Schedule { get; set; }
-        public bool Availability { get; set; }
+
+        [Required]
+        public bool IsAvailable { get; set; }
+
+        public double Rating { get; set; }
 
     }
 }

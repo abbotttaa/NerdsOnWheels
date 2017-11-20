@@ -213,6 +213,10 @@
     <Compile Include="Migrations\201711201953193_ServiceModel.Designer.cs">
       <DependentUpon>201711201953193_ServiceModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711202103572_UpdatedModels.cs" />
+    <Compile Include="Migrations\201711202103572_UpdatedModels.Designer.cs">
+      <DependentUpon>201711202103572_UpdatedModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -304,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711201953193_ServiceModel.resx">
       <DependentUpon>201711201953193_ServiceModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711202103572_UpdatedModels.resx">
+      <DependentUpon>201711202103572_UpdatedModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
