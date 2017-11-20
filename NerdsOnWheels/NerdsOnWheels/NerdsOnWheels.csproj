@@ -221,6 +221,10 @@
     <Compile Include="Migrations\201711202136490_UpdateForGroupPull.Designer.cs">
       <DependentUpon>201711202136490_UpdateForGroupPull.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711202139517_TypoBoolFix.cs" />
+    <Compile Include="Migrations\201711202139517_TypoBoolFix.Designer.cs">
+      <DependentUpon>201711202139517_TypoBoolFix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -318,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711202136490_UpdateForGroupPull.resx">
       <DependentUpon>201711202136490_UpdateForGroupPull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711202139517_TypoBoolFix.resx">
+      <DependentUpon>201711202139517_TypoBoolFix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

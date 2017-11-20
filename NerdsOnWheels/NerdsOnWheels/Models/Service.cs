@@ -15,7 +15,7 @@ namespace NerdsOnWheels.Models
         [Display(Name = "What's your issue?")]
         public string AssistanceRequestType { get; set; }
 
-        public bool TicketStatus { get; set; }
+        public bool IsTicketOpen { get; set; }
 
 
         [DataType(DataType.Date)]
