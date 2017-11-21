@@ -228,6 +228,10 @@
     <Compile Include="Migrations\201711202139517_TypoBoolFix.Designer.cs">
       <DependentUpon>201711202139517_TypoBoolFix.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711211642099_Fixed Db Types.cs" />
+    <Compile Include="Migrations\201711211642099_Fixed Db Types.Designer.cs">
+      <DependentUpon>201711211642099_Fixed Db Types.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -344,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711202139517_TypoBoolFix.resx">
       <DependentUpon>201711202139517_TypoBoolFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711211642099_Fixed Db Types.resx">
+      <DependentUpon>201711211642099_Fixed Db Types.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
