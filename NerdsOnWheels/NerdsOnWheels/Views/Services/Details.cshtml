@@ -1,0 +1,51 @@
+﻿@model NerdsOnWheels.Models.Service
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Service</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AssistanceRequestType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssistanceRequestType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsTicketOpen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsTicketOpen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfEvent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfEvent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CloseDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CloseDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
