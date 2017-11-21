@@ -22,8 +22,8 @@ namespace NerdsOnWheels.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Customer> Customers { get; set; }
-        public DbSet<Customer> Services { get; set; }
-        public DbSet<Customer> Technicians { get; set; }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<Technician> Technicians { get; set; }
 
         public ApplicationDbContext()
              
