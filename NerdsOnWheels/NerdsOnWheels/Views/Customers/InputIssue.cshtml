@@ -1,9 +1,29 @@
-﻿
+﻿@model NerdsOnWheels.Models.Service
 @{
     ViewBag.Title = "InputIssue";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Input Issue</h2>
+<h2>General Problems</h2>
 
-@Html.TextBox
+@using (Html.BeginForm())
+{
+    
+        <td>General Probelms: </td>
+        <td>
+            @Html.DropDownListFor(m => m.AssistanceRequestType, new List<SelectListItem>
+{ new SelectListItem{Text="Hardware", Value="H"},
+  new SelectListItem{Text="Software", Value="S"},
+  new SelectListItem{Text="Internet", Value="I"},
+  new SelectListItem{Text="Other", Value="O"},}, "Please select")
+        </td>
+
+        <div>
+            <td> Try to describe what your issue is. If you don't know what your issue is at all, leave this box as is.</td>
+        </div>
+
+        <div>
+            @Html.TextBox("issueTextBox", "Tell us what's going on.", new { @class = "form-control" }) 
+        </div>
+
+}
