@@ -196,8 +196,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Controllers\TechniciansController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -225,6 +228,10 @@
     <Compile Include="Migrations\201711202139517_TypoBoolFix.Designer.cs">
       <DependentUpon>201711202139517_TypoBoolFix.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711211642099_Fixed Db Types.cs" />
+    <Compile Include="Migrations\201711211642099_Fixed Db Types.Designer.cs">
+      <DependentUpon>201711211642099_Fixed Db Types.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -238,6 +245,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\StarRatingStylesheet.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -269,7 +277,9 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -296,9 +306,27 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Services\Create.cshtml" />
+    <Content Include="Views\Services\Delete.cshtml" />
+    <Content Include="Views\Services\Details.cshtml" />
+    <Content Include="Views\Services\Edit.cshtml" />
+    <Content Include="Views\Services\Index.cshtml" />
+    <Content Include="Views\Technicians\Create.cshtml" />
+    <Content Include="Views\Technicians\Delete.cshtml" />
+    <Content Include="Views\Technicians\Details.cshtml" />
+    <Content Include="Views\Technicians\Edit.cshtml" />
+    <Content Include="Views\Technicians\Index.cshtml" />
+    <Content Include="Views\Customers\InputIssue.cshtml" />
+    <Content Include="Views\Customers\RateHelp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -326,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711202139517_TypoBoolFix.resx">
       <DependentUpon>201711202139517_TypoBoolFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711211642099_Fixed Db Types.resx">
+      <DependentUpon>201711211642099_Fixed Db Types.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
