@@ -15,6 +15,13 @@ namespace NerdsOnWheels.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
 
+        public ActionResult TechMap()
+        {
+            //write logic to populate the map with techs within range
+            //for each tech in database if CurrentLocation < 1 mi, add to list, then send that list to the view in the parameters of the return statemnt
+            return View();
+        }
+
         public ActionResult InputIssue()
         {
             return View();

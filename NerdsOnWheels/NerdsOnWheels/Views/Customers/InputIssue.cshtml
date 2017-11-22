@@ -24,8 +24,14 @@
             <td> Try to describe what your issue is. If you don't know what your issue is at all, leave this box as is.</td>
         </div>
 
-        <div>
+        @*<div>
             @Html.TextBox("issueTextBox", "Tell us what's going on.", new { @class = "form-control" }) 
+        </div>*@
+
+        <div class="col-md-4">
+            <h2>Find a Tech</h2>
+            <p>Get help from a tech in your area</p>
+            <p><a class="btn btn-default" href="TechMap">Find a Tech &raquo;</a></p>
         </div>
 
 }
