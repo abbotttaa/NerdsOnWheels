@@ -24,9 +24,8 @@ namespace NerdsOnWheels
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"
-                     /* "~/Content/StarRatingStylesheet.css"*/));
+                      "~/Content/bootstrap-pulse.css",
+                      "~/Content/site.css"));
         }
     }
 }
