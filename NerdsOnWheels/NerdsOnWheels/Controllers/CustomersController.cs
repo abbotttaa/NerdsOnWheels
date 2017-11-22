@@ -134,5 +134,10 @@ namespace NerdsOnWheels.Controllers
            
             return View();
         }
+
+        public ActionResult ViewCustomerProfile()
+        {
+            return View();
+        }
     }
 }
