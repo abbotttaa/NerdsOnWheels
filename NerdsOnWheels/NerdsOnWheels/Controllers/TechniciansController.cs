@@ -123,5 +123,10 @@ namespace NerdsOnWheels.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult Nerd()
+        {
+            return View();
+        }
     }
 }
