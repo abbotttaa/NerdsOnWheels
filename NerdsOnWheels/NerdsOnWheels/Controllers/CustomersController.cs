@@ -131,6 +131,7 @@ namespace NerdsOnWheels.Controllers
 
         public ActionResult RateHelp()
         {
+           
             return View();
         }
     }
