@@ -128,5 +128,11 @@ namespace NerdsOnWheels.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult RateHelp()
+        {
+           
+            return View();
+        }
     }
 }
