@@ -15,6 +15,11 @@ namespace NerdsOnWheels.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
 
+        public ActionResult MakePayment()
+        {
+            return View();
+        }
+
         public ActionResult TechMap()
         {
             //write logic to populate the map with techs within range

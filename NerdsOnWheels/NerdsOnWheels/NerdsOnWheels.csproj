@@ -324,13 +324,11 @@
     <Content Include="Views\Technicians\Index.cshtml" />
     <Content Include="Views\Customers\InputIssue.cshtml" />
     <Content Include="Views\Customers\RateHelp.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Customers\TechMap.cshtml" />
-=======
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\Technicians\Nerd.cshtml" />
     <Content Include="Views\Customers\ViewCustomerProfile.cshtml" />
->>>>>>> 07bdf2bbbfb3db21f5dbd50d2d270ce4bd1f20db
+    <Content Include="Views\Customers\MakePayment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
