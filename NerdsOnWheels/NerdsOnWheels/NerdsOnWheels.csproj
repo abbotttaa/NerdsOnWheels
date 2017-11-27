@@ -233,6 +233,18 @@
     <Compile Include="Migrations\201711211642099_Fixed Db Types.Designer.cs">
       <DependentUpon>201711211642099_Fixed Db Types.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711271526283_CustomerIssues.cs" />
+    <Compile Include="Migrations\201711271526283_CustomerIssues.Designer.cs">
+      <DependentUpon>201711271526283_CustomerIssues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711271542175_customer.cs" />
+    <Compile Include="Migrations\201711271542175_customer.Designer.cs">
+      <DependentUpon>201711271542175_customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711271545089_AssistanceRequestTypeNameChange.cs" />
+    <Compile Include="Migrations\201711271545089_AssistanceRequestTypeNameChange.Designer.cs">
+      <DependentUpon>201711271545089_AssistanceRequestTypeNameChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -259,7 +271,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\ChatRoom.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -328,6 +339,7 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\Technicians\Nerd.cshtml" />
     <Content Include="Views\Customers\ViewCustomerProfile.cshtml" />
+    <Content Include="Views\Technicians\GoogleMaps.cshtml" />
     <Content Include="Views\Customers\MakePayment.cshtml" />
     <Content Include="Views\Customers\LearnMore.cshtml" />
   </ItemGroup>
@@ -364,6 +376,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711211642099_Fixed Db Types.resx">
       <DependentUpon>201711211642099_Fixed Db Types.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711271526283_CustomerIssues.resx">
+      <DependentUpon>201711271526283_CustomerIssues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711271542175_customer.resx">
+      <DependentUpon>201711271542175_customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711271545089_AssistanceRequestTypeNameChange.resx">
+      <DependentUpon>201711271545089_AssistanceRequestTypeNameChange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

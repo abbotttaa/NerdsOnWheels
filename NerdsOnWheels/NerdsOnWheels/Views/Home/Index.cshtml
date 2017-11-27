@@ -2,21 +2,6 @@
     ViewBag.Title = "Home Page";
 }
 
-@*var settings = {
-  "async": true,
-  "crossDomain": true,
-  "url": "https://www.twilio.com/docs/api/chat/guides/channels",
-  "method": "GET",
-  "headers": {
-    "cache-control": "no-cache",
-    "postman-token": "df21fddc-932e-574e-dff1-1443601bf129"
-  }
-}
-
-$.ajax(settings).done(function (response) {
-  console.log(response);
-});*@
-
 
 <div class="jumbotron">
     <h1>Welcome to Nerds On Wheels!</h1>
@@ -56,7 +41,7 @@ $.ajax(settings).done(function (response) {
     <div class="col-md-4">
         <h2>Admin Login</h2>
         <p>If you are an Administrator or Employee of Nerds On Wheels, use your credentials to log in here.</p>
-        <p><a class="btn btn-default" href="..\Technicians\Create">Admin Login &raquo;</a></p>
+        <p><a class="btn btn-default" href="http://localhost:22799/Account/Login">Admin Login &raquo;</a></p>
     </div>
 
 </div>

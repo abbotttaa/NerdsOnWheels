@@ -56,6 +56,21 @@ namespace NerdsOnWheels
                 role.Name = "Nerd";
                 roleManager.Create(role);
 
+                var user = new ApplicationUser();
+                user.UserName = "Employee1";
+                user.Email = "iron@gmail.com";
+
+                string userPWD = "devCodeCamp2!";
+
+                var chkUser = UserManager.Create(user, userPWD);
+
+                //Add default User to Role Admin   
+                if (chkUser.Succeeded)
+                {
+                    var result1 = UserManager.AddToRole(user.Id, "Nerd");
+
+                }
+
             }
 
             // creating Creating customer role    

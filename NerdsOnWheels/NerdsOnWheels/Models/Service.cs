@@ -12,7 +12,7 @@ namespace NerdsOnWheels.Models
         public int ID { get; set; }
 
         [Required]
-        [Display(Name = "What's your issue?")]
+        [Display(Name = "Describe your issue:")]
         public string AssistanceRequestType { get; set; }
 
         public bool IsTicketOpen { get; set; }

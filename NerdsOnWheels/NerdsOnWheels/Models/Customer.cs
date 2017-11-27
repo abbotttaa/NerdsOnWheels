@@ -26,5 +26,6 @@ namespace NerdsOnWheels.Models
 
 
         public string Balance { get; set; }
+
     }
 }
