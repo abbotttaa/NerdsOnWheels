@@ -68,13 +68,13 @@ namespace NerdsOnWheels.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,FirstName,LastName,PhoneNumber,Balance")] Customer customer)
+        public ActionResult Create([Bind(Include = "ID,FirstName,LastName,PhoneNumber,Balance")] Customer customer) 
         {
             if (ModelState.IsValid)
             {
-                db.Customers.Add(customer);
+                db.Customers.Add(customer); 
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index");//Change this to Profile Summary
             }
 
             return View(customer);
