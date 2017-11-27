@@ -20,6 +20,11 @@ namespace NerdsOnWheels.Controllers
             return View();
         }
 
+        public ActionResult LearnMore()
+        {
+            return View();
+        }
+
         public ActionResult TechMap()
         {
             //write logic to populate the map with techs within range
