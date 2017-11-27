@@ -128,5 +128,10 @@ namespace NerdsOnWheels.Controllers
         {
             return View();
         }
+
+        public ActionResult GoogleMaps()
+        {
+            return View();
+        }
     }
 }
