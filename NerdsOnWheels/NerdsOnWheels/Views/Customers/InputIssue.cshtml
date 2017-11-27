@@ -19,14 +19,33 @@
   new SelectListItem{Text="Internet", Value="I"},
   new SelectListItem{Text="Other", Value="O"},}, "Please select")
         </td>
-
+        <br />
+        <br />
         <div>
             <td> Try to describe what your issue is. If you don't know what your issue is at all, leave this box as is.</td>
         </div>
-
-        <div>
-            @Html.TextBox("issueTextBox", "Tell us what's going on.", new { @class = "form-control" }) 
+        <br />
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AssistanceRequestType, new { htmlAttributes = new { @class = "form-control" } })
+                .
+                @Html.ValidationMessageFor(model => model.AssistanceRequestType, "", new { @class = "text-danger" })
+            </div>
         </div>
+
+        <div class="col-md-4">
+            <h2>Find a Tech</h2>
+            <p>Get help from a tech in your area</p>
+            <p><a class="btn btn-default" href="TechMap">Find a Tech &raquo;</a></p>
+        </div>
+<br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
 }
 

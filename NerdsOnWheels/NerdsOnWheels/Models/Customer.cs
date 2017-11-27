@@ -24,5 +24,6 @@ namespace NerdsOnWheels.Models
         public string PhoneNumber { get; set; }
 
         public string Balance { get; set; }
+
     }
 }

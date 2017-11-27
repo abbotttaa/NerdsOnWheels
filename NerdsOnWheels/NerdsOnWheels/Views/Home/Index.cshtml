@@ -2,21 +2,6 @@
     ViewBag.Title = "Home Page";
 }
 
-@*var settings = {
-  "async": true,
-  "crossDomain": true,
-  "url": "https://www.twilio.com/docs/api/chat/guides/channels",
-  "method": "GET",
-  "headers": {
-    "cache-control": "no-cache",
-    "postman-token": "df21fddc-932e-574e-dff1-1443601bf129"
-  }
-}
-
-$.ajax(settings).done(function (response) {
-  console.log(response);
-});*@
-
 
 <div class="jumbotron">
     <h1>Welcome to Nerds On Wheels!</h1>
@@ -30,25 +15,33 @@ $.ajax(settings).done(function (response) {
         <p>
             Create an account and profile.  Once we have your basic information, we can find out how to help you!
         </p>
-        <p><a class="btn btn-default" href="http://localhost:22799/Account/Register">Create Profile &raquo;</a></p>
+        <p><a class="btn btn-default" href="..\Customers\Create">Create Profile &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h2>Step Two: Let Us Know Your Troubles</h2>
         <p>Select your technical issue from a basic drop down menu, and add any details you can in the comment box.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Submit Request &raquo;</a></p>
+        <p><a class="btn btn-default" href="..\Customers\InputIssue">Submit Request &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h2>Step Three: Rate Us!</h2>
         <p>Let us know how we did!  Rate us on a 5-star scale.  If your service was any less than perfect, let us know what we could have done to make it a 5-star experience.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Rate Us &raquo;</a></p>
+        <p><a class="btn btn-default" href="..\Customers\RateHelp">Rate Us &raquo;</a></p>
     </div>
-
-   
-
 </div>
 
-<div class="col-md-4">
-    <h2>Admin Login</h2>
-    <p>If you are an Administrator or Employee of Nerds On Wheels, use your credentials to log in here.</p>
-    <p><a class="btn btn-default" href="http://localhost:22799/Account/Login">Admin Login &raquo;</a></p>
+
+<div>
+
+    <div class="col-md-4">
+        <h2>Make Payment</h2>
+        <p>See your outstanding balance and make payments to your account here.</p>
+        <p><a class="btn btn-default" href="..\Customers\MakePayment">Make Payment &raquo;</a></p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Admin Login</h2>
+        <p>If you are an Administrator or Employee of Nerds On Wheels, use your credentials to log in here.</p>
+        <p><a class="btn btn-default" href="http://localhost:22799/Account/Login">Admin Login &raquo;</a></p>
+    </div>
+
 </div>
