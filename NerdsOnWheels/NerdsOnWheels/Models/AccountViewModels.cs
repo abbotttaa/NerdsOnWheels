@@ -63,13 +63,13 @@ namespace NerdsOnWheels.Models
 
     public class RegisterViewModel
     {
-        [Required]
-        [Display(Name = "UserRoles")]
+
+        [Display(Name = "User Roles")]
         public string UserRoles { get; set; }
 
-        [Required]
-        [Display(Name = "Username")]
-        public string Username { get; set; }
+
+        //[Display(Name = "Username")]
+        //public string Username { get; set; }
 
         [Required]
         [EmailAddress]

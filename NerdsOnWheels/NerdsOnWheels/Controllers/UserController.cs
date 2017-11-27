@@ -22,14 +22,14 @@ namespace NerdsOnWheels.Controllers
 
                 ViewBag.displayMenu = "No";
 
-                if (isAdminUser())
+                if (IsUserAdmin())
                 {
                     ViewBag.displayMenu = "Yes";
                 }
-                if (isEmployeeUser())
-                {
-                    ViewBag.displayMenu = "Yes";
-                }
+                //if (isEmployeeUser())
+                //{
+                //    ViewBag.displayMenu = "Yes";
+                //}
                 return View();
             }
             else
@@ -41,7 +41,7 @@ namespace NerdsOnWheels.Controllers
 
 
 
-        public Boolean isAdminUser()
+        public Boolean IsUserAdmin()
         {
             if (User.Identity.IsAuthenticated)
             {
@@ -66,24 +66,24 @@ namespace NerdsOnWheels.Controllers
 
 
 
-        public Boolean isEmployeeUser()
-        {
-            if (User.Identity.IsAuthenticated)
-            {
-                var user = User.Identity;
-                ApplicationDbContext context = new ApplicationDbContext();
-                var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
-                var s = UserManager.GetRoles(user.GetUserId());
-                if (s[0].ToString() == "Nerd")
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            return false;
-        }
+        //public Boolean isEmployeeUser()
+        //{
+        //    if (User.Identity.IsAuthenticated)
+        //    {
+        //        var user = User.Identity;
+        //        ApplicationDbContext context = new ApplicationDbContext();
+        //        var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+        //        var s = UserManager.GetRoles(user.GetUserId());
+        //        if (s[0].ToString() == "Nerd")
+        //        {
+        //            return true;
+        //        }
+        //        else
+        //        {
+        //            return false;
+        //        }
+        //    }
+        //    return false;
+        //}
     }
 }
