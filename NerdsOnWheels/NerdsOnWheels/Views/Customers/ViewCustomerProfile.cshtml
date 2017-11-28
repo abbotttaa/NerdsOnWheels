@@ -1,4 +1,4 @@
-﻿
+﻿@model NerdsOnWheels.ViewModels.CustomerProfileViewModel
 @{
     ViewBag.Title = "View Customer Profile";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -9,6 +9,45 @@
 <br />
 <br />
 
+<h2>Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.Balance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.Balance)
+        </dd>
+
+    </dl>
+</div>
 
 <input type="submit" value="Change My Info" />
 <br />
@@ -19,54 +58,6 @@
 
 <input type="submit" value="View My Service History" />
 <br />
-
-@model NerdsOnWheels.Models.Customer
-
-@{
-    ViewBag.Title = "Details";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-<h2>Details</h2>
-
-<div>
-    <h4>Customer</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PhoneNumber)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Balance)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Balance)
-        </dd>
-
-    </dl>
-</div>
 @*<p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
     @Html.ActionLink("Back to List", "Index")
