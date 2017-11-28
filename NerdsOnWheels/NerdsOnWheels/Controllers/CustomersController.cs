@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using NerdsOnWheels.Models;
+using NerdsOnWheels.ViewModels;
 
 namespace NerdsOnWheels.Controllers
 {
@@ -152,9 +153,11 @@ namespace NerdsOnWheels.Controllers
             return View();
         }
 
-        public ActionResult ViewCustomerProfile()
+        public ActionResult ViewCustomerProfile(int id)
         {
-            return View();
+            Customer customer = db.Customers.Single(x => x.ID == id);
+            var customerViewModel = new CustomerProfileViewModel(customer);
+            return View(customerViewModel);
         }
     }
 }
