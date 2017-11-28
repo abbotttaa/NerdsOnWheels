@@ -7,7 +7,6 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using NerdsOnWheels.Models;
-using NerdsOnWheels.ViewModels;
 
 namespace NerdsOnWheels.Controllers
 {
@@ -47,6 +46,7 @@ namespace NerdsOnWheels.Controllers
             {
                 var ticket = new Service { AssistanceRequestType = service.AssistanceRequestType, AssistanceRequestDescription = service.AssistanceRequestDescription, };
                 db.Services.Add(ticket);
+
                 db.SaveChanges();
                 return RedirectToAction("TechMap");
             }
@@ -170,11 +170,9 @@ namespace NerdsOnWheels.Controllers
             return View();
         }
 
-        public ActionResult ViewCustomerProfile(int id)
+        public ActionResult ViewCustomerProfile()
         {
-            Customer customer = db.Customers.Single(x => x.ID == id);
-            var customerViewModel = new CustomerProfileViewModel(customer);
-            return View(customerViewModel);
+            return View();
         }
 
 
