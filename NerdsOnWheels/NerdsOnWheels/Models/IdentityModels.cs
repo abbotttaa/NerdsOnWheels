@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -17,6 +18,11 @@ namespace NerdsOnWheels.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        //public static implicit operator string(ApplicationUser v)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
