@@ -9,7 +9,7 @@ namespace NerdsOnWheels.Models
     public class Technician
     {
         [Key]
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [Display(Name = "First Name")]
@@ -25,6 +25,8 @@ namespace NerdsOnWheels.Models
         public bool IsAvailable { get; set; }
 
         public double Rating { get; set; }
+
+
 
     }
 }

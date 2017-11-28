@@ -7,13 +7,22 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using NerdsOnWheels.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace NerdsOnWheels.Controllers
 {
     public class CustomersController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        protected ApplicationDbContext ApplicationDbContext { get; set; }
+        protected UserManager<ApplicationUser> UserManager { get; set; }
 
+        public CustomersController()
+        {
+            this.ApplicationDbContext = new ApplicationDbContext();
+            this.UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(this.ApplicationDbContext));
+        }
 
         public ActionResult MakePayment()
         {
@@ -40,13 +49,16 @@ namespace NerdsOnWheels.Controllers
 
         //Post: Customer/InputIssue
         [HttpPost]
-        public ActionResult InputIssue([Bind(Include = "AssistanceRequestType, AssistanceRequestDescription")] Service service)
+        public ActionResult InputIssue([Bind(Include = "ID, AssistanceRequestType, AssistanceRequestDescription")] Service service)
         {
+            var user = UserManager.FindById(User.Identity.GetUserId());
+
             if (ModelState.IsValid)
             {
-                var ticket = new Service { AssistanceRequestType = service.AssistanceRequestType, AssistanceRequestDescription = service.AssistanceRequestDescription, };
+               
+                var ticket = new Service { AssistanceRequestType = service.AssistanceRequestType, AssistanceRequestDescription = service.AssistanceRequestDescription, IsTicketOpen = true};
+                ticket.CustomerId = user.Id;
                 db.Services.Add(ticket);
-
                 db.SaveChanges();
                 return RedirectToAction("TechMap");
             }
