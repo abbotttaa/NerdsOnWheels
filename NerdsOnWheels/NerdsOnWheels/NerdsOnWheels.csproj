@@ -249,6 +249,14 @@
     <Compile Include="Migrations\201711281441259_AssistanceRequestDescription.Designer.cs">
       <DependentUpon>201711281441259_AssistanceRequestDescription.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711281700433_ForeignKeyForServices.cs" />
+    <Compile Include="Migrations\201711281700433_ForeignKeyForServices.Designer.cs">
+      <DependentUpon>201711281700433_ForeignKeyForServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711281750318_customerFK.cs" />
+    <Compile Include="Migrations\201711281750318_customerFK.Designer.cs">
+      <DependentUpon>201711281750318_customerFK.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -393,6 +401,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711281441259_AssistanceRequestDescription.resx">
       <DependentUpon>201711281441259_AssistanceRequestDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711281700433_ForeignKeyForServices.resx">
+      <DependentUpon>201711281700433_ForeignKeyForServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711281750318_customerFK.resx">
+      <DependentUpon>201711281750318_customerFK.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
