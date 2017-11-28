@@ -10,14 +10,18 @@
 
 @using (Html.BeginForm())
 {
-    
+        @Html.AntiForgeryToken()
+
         <td>General Probelms: </td>
         <td>
-            @Html.DropDownListFor(m => m.AssistanceRequestType, new List<SelectListItem>
-{ new SelectListItem{Text="Hardware", Value="H"},
-  new SelectListItem{Text="Software", Value="S"},
-  new SelectListItem{Text="Internet", Value="I"},
-  new SelectListItem{Text="Other", Value="O"},}, "Please select")
+            <div class="form-group">
+                @Html.DropDownListFor(m => m.AssistanceRequestType, new List<SelectListItem>
+                { new SelectListItem{Text="Hardware", Value="H"},
+                 new SelectListItem{Text="Software", Value="S"},
+                 new SelectListItem{Text="Internet", Value="I"},
+                 new SelectListItem{Text="Other", Value="O"},}, "Please select")
+            </div>
+            
         </td>
         <br />
         <br />
@@ -27,17 +31,23 @@
         <br />
         <div class="form-group">
             <div class="col-md-10">
-                @Html.EditorFor(model => model.AssistanceRequestType, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.AssistanceRequestDescription, new { htmlAttributes = new { @class = "form-control" } })
                 .
-                @Html.ValidationMessageFor(model => model.AssistanceRequestType, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.AssistanceRequestDescription, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="InputIssue" class="btn btn-default" href="InputIssue"  />
+            </div>
+        </div>
+
+        @*<div class="col-md-4">
             <h2>Find a Tech</h2>
             <p>Get help from a tech in your area</p>
-            <p><a class="btn btn-default" href="TechMap">Find a Tech &raquo;</a></p>
-        </div>
+            <p><a class="btn btn-default" href="TechMap">Submit Issue &raquo;</a></p>
+        </div>*@
 <br />
     <br />
     <br />
