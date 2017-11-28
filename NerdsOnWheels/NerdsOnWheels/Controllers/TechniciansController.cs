@@ -115,6 +115,20 @@ namespace NerdsOnWheels.Controllers
             return RedirectToAction("Index");
         }
 
+        //Get: Technicians/ClaimTicket
+        public ActionResult ClaimTicket()
+        {
+            return View();
+        }
+
+
+        //Post: Technician/ClaimTicket
+        //[HttpPost]
+        //public ActionResult ClaimTicket()
+        //{
+        //    return View();
+        //}
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
