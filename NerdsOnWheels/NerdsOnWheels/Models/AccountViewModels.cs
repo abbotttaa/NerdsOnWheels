@@ -49,6 +49,7 @@ namespace NerdsOnWheels.Models
     public class LoginViewModel
     {
         [Required]
+        [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
 

@@ -12,8 +12,11 @@ namespace NerdsOnWheels.Models
         public int ID { get; set; }
 
         [Required]
-        [Display(Name = "Describe your issue:")]
         public string AssistanceRequestType { get; set; }
+
+        [Display(Name= "Describe your issue: ")]
+        public string AssistanceRequestDescription { get; set; }
+
 
         public bool IsTicketOpen { get; set; }
 

@@ -32,10 +32,28 @@ namespace NerdsOnWheels.Controllers
             return View();
         }
 
+        //Get: Customer/InputIssue
         public ActionResult InputIssue()
         {
             return View();
         }
+
+        //Post: Customer/InputIssue
+        [HttpPost]
+        public ActionResult InputIssue([Bind(Include = "AssistanceRequestType, AssistanceRequestDescription")] Service service)
+        {
+            if (ModelState.IsValid)
+            {
+                var ticket = new Service { AssistanceRequestType = service.AssistanceRequestType, AssistanceRequestDescription = service.AssistanceRequestDescription, };
+                db.Services.Add(ticket);
+
+                db.SaveChanges();
+                return RedirectToAction("TechMap");
+            }
+            return View(service);
+        }
+
+
         // GET: Customers
         public ActionResult Index()
         {
@@ -156,5 +174,7 @@ namespace NerdsOnWheels.Controllers
         {
             return View();
         }
+
+
     }
 }
