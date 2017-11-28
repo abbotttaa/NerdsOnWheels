@@ -61,7 +61,7 @@ namespace NerdsOnWheels.Models
         public bool RememberMe { get; set; }
     }
 
-    public class RegisterViewModel
+    public class RegisterViewModel//Customers
     {
 
         [Display(Name = "User Roles")]
@@ -70,7 +70,19 @@ namespace NerdsOnWheels.Models
 
         //[Display(Name = "Username")]
         //public string Username { get; set; }
+        [Required]
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
 
+        [Required]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        [Required]
+        [Display(Name = "Phone Number")]
+        public string PhoneNumber { get; set; }
+        
+        public string Balance { get; set; }
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
