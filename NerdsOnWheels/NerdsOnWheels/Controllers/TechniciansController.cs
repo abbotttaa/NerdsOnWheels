@@ -115,9 +115,26 @@ namespace NerdsOnWheels.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult ShowOpenTickets()
+        {
+            //foreach(ticket in Service)
+            //{
+            //    if (isTicketOpen == true)
+            //    {
+            //        //list first name, last name, address, issue type/description , and display an Accept button
+            //    }
+            //}
+
+            var openTickets = db.Services.Where(s => s.IsTicketOpen == true).ToList();
+
+            return View(openTickets);
+        }
+
         //Get: Technicians/ClaimTicket
+        [HttpPut]
         public ActionResult ClaimTicket()
         {
+            
             return View();
         }
 
@@ -149,3 +166,4 @@ namespace NerdsOnWheels.Controllers
         }
     }
 }
+
