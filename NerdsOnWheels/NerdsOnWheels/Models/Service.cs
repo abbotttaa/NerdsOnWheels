@@ -34,6 +34,9 @@ namespace NerdsOnWheels.Models
         [Display(Name ="Ticket Availability: ")]
         public bool IsTicketOpen { get; set; }
 
+        [Display(Name ="Rating")]
+        public int Rating { get; set; }
+
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
