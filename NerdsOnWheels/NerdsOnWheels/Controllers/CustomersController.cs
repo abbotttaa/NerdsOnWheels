@@ -66,6 +66,7 @@ namespace NerdsOnWheels.Controllers
         }
 
 
+
         // GET: Customers
         public ActionResult Index()
         {
@@ -104,7 +105,7 @@ namespace NerdsOnWheels.Controllers
             {
                 db.Customers.Add(customer); 
                 db.SaveChanges();
-                return RedirectToAction("Index");//Change this to Profile Summary
+                return RedirectToAction("CustomerHome");//Change this to Profile Summary
             }
 
             return View(customer);
@@ -166,6 +167,15 @@ namespace NerdsOnWheels.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        //Get: Customer/HomePage
+        public ActionResult CustomerHome()
+        {
+            return View();
+        }
+
+        //Post: Customer/HomePage
+        
 
         protected override void Dispose(bool disposing)
         {

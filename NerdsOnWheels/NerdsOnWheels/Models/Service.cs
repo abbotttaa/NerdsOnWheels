@@ -13,19 +13,17 @@ namespace NerdsOnWheels.Models
         public int Id { get; set; }
 
 
-
-
         [Display(Name = "Customer")]
         public string CustomerId { get; set; }
         [ForeignKey("CustomerId")]
-        public virtual ApplicationUser Users { get; set; }    
+        public virtual ApplicationUser Users { get; set; }
 
 
-        //[ForeignKey("CustomerId")]
-        //public virtual ICollection<RegisterViewModel> CustomerID { get; set; }
 
-        //[ForeignKey("TechnicianId")]
-        //public virtual ICollection<RegisterViewModel> TechnicianId { get; set; }
+        [Display(Name = "Technician")]
+        public string TechnicianId { get; set; }
+        [ForeignKey("TechnicianId")]
+        public virtual ApplicationUser Techs { get; set; }
 
         [Required]
         public string AssistanceRequestType { get; set; }
@@ -44,14 +42,6 @@ namespace NerdsOnWheels.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public string CloseDate { get; set; }
-
-        //[ForeignKey("CustomerID")]
-        //public int CustomerID { get; set; }
-
-        //[ForeignKey("TechnicianID")]
-        //public int TechnicianID { get; set; }
-
-
 
     }
 }
