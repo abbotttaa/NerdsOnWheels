@@ -274,6 +274,22 @@
     <Compile Include="Migrations\201711281956260_TechFK.Designer.cs">
       <DependentUpon>201711281956260_TechFK.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711290325043_NerdPhoneNumber.cs" />
+    <Compile Include="Migrations\201711290325043_NerdPhoneNumber.Designer.cs">
+      <DependentUpon>201711290325043_NerdPhoneNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711290327054_nerdEmail.cs" />
+    <Compile Include="Migrations\201711290327054_nerdEmail.Designer.cs">
+      <DependentUpon>201711290327054_nerdEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711291542104_instructor.cs" />
+    <Compile Include="Migrations\201711291542104_instructor.Designer.cs">
+      <DependentUpon>201711291542104_instructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711291552386_confirmPassword.cs" />
+    <Compile Include="Migrations\201711291552386_confirmPassword.Designer.cs">
+      <DependentUpon>201711291552386_confirmPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -374,7 +390,7 @@
     <Content Include="Views\Customers\LearnMore.cshtml" />
     <Content Include="Views\Technicians\ClaimTicket.cshtml" />
     <Content Include="Views\Customers\CustomerHome.cshtml" />
-    <Content Include="Views\Account\EmployeeRegister.cshtml" />
+    <Content Include="Views\Technicians\EmployeeRegister.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -430,6 +446,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711281956260_TechFK.resx">
       <DependentUpon>201711281956260_TechFK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711290325043_NerdPhoneNumber.resx">
+      <DependentUpon>201711290325043_NerdPhoneNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711290327054_nerdEmail.resx">
+      <DependentUpon>201711290327054_nerdEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711291542104_instructor.resx">
+      <DependentUpon>201711291542104_instructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711291552386_confirmPassword.resx">
+      <DependentUpon>201711291552386_confirmPassword.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
