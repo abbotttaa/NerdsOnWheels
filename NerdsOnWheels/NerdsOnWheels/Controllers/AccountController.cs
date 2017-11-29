@@ -154,7 +154,7 @@ namespace NerdsOnWheels.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model)
+        public async Task<ActionResult> Register([Bind(Include = "ID,FirstName,LastName,PhoneNumber,Email,Address,Password,ConfirmPassword")]RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {

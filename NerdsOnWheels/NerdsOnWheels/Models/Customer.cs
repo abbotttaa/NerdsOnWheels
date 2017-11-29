@@ -23,6 +23,8 @@ namespace NerdsOnWheels.Models
         [Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
 
+        [Required]
+        public string Address { get; set; }
 
 
         public string Balance { get; set; }

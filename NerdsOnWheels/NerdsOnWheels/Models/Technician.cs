@@ -37,6 +37,8 @@ namespace NerdsOnWheels.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
+        [Display(Name = "Technician's Current Location")]
+        public string Location { get; set; }
 
         public string Schedule { get; set; }
 

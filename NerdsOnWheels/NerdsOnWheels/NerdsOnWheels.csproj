@@ -290,6 +290,18 @@
     <Compile Include="Migrations\201711291552386_confirmPassword.Designer.cs">
       <DependentUpon>201711291552386_confirmPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711291652535_address.cs" />
+    <Compile Include="Migrations\201711291652535_address.Designer.cs">
+      <DependentUpon>201711291652535_address.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711291654421_location.cs" />
+    <Compile Include="Migrations\201711291654421_location.Designer.cs">
+      <DependentUpon>201711291654421_location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711291657146_address1.cs" />
+    <Compile Include="Migrations\201711291657146_address1.Designer.cs">
+      <DependentUpon>201711291657146_address1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -460,6 +472,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711291552386_confirmPassword.resx">
       <DependentUpon>201711291552386_confirmPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711291652535_address.resx">
+      <DependentUpon>201711291652535_address.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711291654421_location.resx">
+      <DependentUpon>201711291654421_location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711291657146_address1.resx">
+      <DependentUpon>201711291657146_address1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
