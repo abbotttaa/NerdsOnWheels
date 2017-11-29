@@ -15,6 +15,8 @@ namespace NerdsOnWheels.Controllers
     public class TechniciansController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        protected UserManager<ApplicationUser> UserManager { get; set; }
+
 
 
         // GET: Technicians
@@ -129,15 +131,23 @@ namespace NerdsOnWheels.Controllers
             //}
 
             var openTickets = db.Services.Where(s => s.IsTicketOpen == true).ToList();
+            //var isClaimed = db.Services.Where(s => s.IsTicketOpen == false).ToList();
+            //if(openTickets = isClaimed)
+            //{
 
+            //}
             return View(openTickets);
         }
 
         //Get: Technicians/ClaimTicket
         [HttpPut]
-        public ActionResult ClaimTicket()
+        public ActionResult ClaimTicket(int TicketId, Service service)
         {
-            
+            var currentTech = UserManager.FindById(User.Identity.GetUserId());
+            var currentTechId = currentTech.Id;
+
+            //In ClaimTicket method, change isTicketOpen to false and assign TechnicianId, HttpPut, 
+
             return View();
         }
 

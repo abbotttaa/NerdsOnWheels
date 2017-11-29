@@ -19,7 +19,8 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Customer.FirstName)
+            <text>Dank</text>
+            @*@Html.DisplayFor(model => model.Customer.FirstName)*@
         </dd>
 
         <dt>
@@ -27,7 +28,8 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Customer.LastName)
+            <text>Meme</text>
+            @*@Html.DisplayFor(model => model.Customer.LastName)*@
         </dd>
 
         <dt>
@@ -35,7 +37,8 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Customer.PhoneNumber)
+            <text>4126168942</text>
+            @*@Html.DisplayFor(model => model.Customer.PhoneNumber)*@
         </dd>
 
         <dt>
@@ -43,25 +46,25 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Customer.Balance)
+            <text>$0.00</text>
+            @*@Html.DisplayFor(model => model.Customer.Balance)*@
         </dd>
 
     </dl>
 </div>
 
-<input type="submit" value="Change My Info" />
-<br />
-<br />
-
-<input type="submit" value="Pay My Bill" />
+<p><a class="btn btn-default" href="..\Customers\MakePayment" style="color:Blue">Pay My Bill &raquo;</a></p>
 <br />
 
-<input type="submit" value="View My Service History" />
+<p><a class="btn btn-default" href="..\Customers\Edit" style="color:Blue">Change My Info &raquo;</a></p>
 <br />
+
+<p><a class="btn btn-default" style="color:Blue">View My Service History &raquo;</a></p>
+
 @*<p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>*@
-
+@*<p><a class="btn btn-default" href="..\Account\EmployeeRegister">Create Profile &raquo;</a></p>*@
 
 

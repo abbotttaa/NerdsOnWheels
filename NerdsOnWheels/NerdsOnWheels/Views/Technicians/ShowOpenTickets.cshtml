@@ -8,11 +8,12 @@
 @foreach (var ticket in Model)
 {
     <tr>
-        <td>@Html.ActionLink(ticket.AssistanceRequestDescription, "Details", "Services")</td>
-
-        <td>@Html.ActionLink("Claim", "ClaimTicket", "Technicians", new { id = ticket.Id }, null)</td>
+        <td>
+            @Html.ActionLink(ticket.AssistanceRequestDescription, "Details", "Services")
+    </td>
+    <td>@Html.ActionLink("Claim", "ClaimTicket", "Technicians", new { id = ticket.Id }, null)</td>
         <!--  In ClaimTicket method, change isTicketOpen to false and assign TechnicianId, HttpPut, -->
-        <br/>
+        <br />
     </tr>
 }
 
