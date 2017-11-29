@@ -7,12 +7,15 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using NerdsOnWheels.Models;
+using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
 
 namespace NerdsOnWheels.Controllers
 {
     public class TechniciansController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+
 
         // GET: Technicians
         public ActionResult Index()
@@ -52,7 +55,7 @@ namespace NerdsOnWheels.Controllers
             {
                 db.Technicians.Add(technician);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Nerd");
             }
 
             return View(technician);
@@ -164,6 +167,32 @@ namespace NerdsOnWheels.Controllers
         {
             return View();
         }
+
+        //Get: Account/EmployeeRegister
+        [AllowAnonymous]
+        public ActionResult EmployeeRegister()
+        {
+
+            return View();
+        }
+
+        // POST: /Account/EmployeeRegister
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EmployeeRegister([Bind(Include = "ID,FirstName,LastName,PhoneNumber,Email,Password,ConfirmPassword")] Technician technician)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Technicians.Add(technician);
+                db.SaveChanges();
+                return RedirectToAction("Nerd");
+            }
+
+            return View(technician);
+
+        }
+
+        
     }
 }
 
