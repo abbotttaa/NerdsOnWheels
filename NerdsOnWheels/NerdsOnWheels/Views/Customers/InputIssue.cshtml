@@ -16,10 +16,10 @@
         <td>
             <div class="form-group">
                 @Html.DropDownListFor(m => m.AssistanceRequestType, new List<SelectListItem>
-                { new SelectListItem{Text="Hardware", Value="H"},
-                 new SelectListItem{Text="Software", Value="S"},
-                 new SelectListItem{Text="Internet", Value="I"},
-                 new SelectListItem{Text="Other", Value="O"},}, "Please select")
+                { new SelectListItem{Text="Hardware", Value="Hardware"},
+                 new SelectListItem{Text="Software", Value="Software"},
+                 new SelectListItem{Text="Internet", Value="Internet"},
+                 new SelectListItem{Text="Other", Value="Other"},}, "Please select")
             </div>
             
         </td>
@@ -39,7 +39,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="InputIssue" class="btn btn-default" href="InputIssue"  />
+                <input type="submit" value="Report Issue" class="btn btn-default" href="InputIssue"  />
             </div>
         </div>
 

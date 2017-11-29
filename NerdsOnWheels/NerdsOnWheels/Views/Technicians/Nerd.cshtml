@@ -7,9 +7,33 @@
     <p class="lead">Hello World</p>
 </div>
 
+
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken();
+}
+<div class="row">
+    <div class="col-md-4">
+        <h2>Claim Ticket</h2>
+        <p>
+            View a list of customers and find an open ticket to claim.
+        </p>
+        <p><a class="btn btn-default" href="http://localhost:22799/Technicians/ClaimTicket">Go &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Chat With Customer</h2>
+        <p>Assist a customer with the problem they are having over chat.</p>
+        <p><a class="btn btn-default" href="http://localhost:22799/Home/Chat">Go &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Google Maps</h2>
+        <p>Find address from a customer ticket and manually enter it into Google maps for directions. </p>
+        <p><a class="btn btn-default" href="http://localhost:22799/Technicians/GoogleMaps">Go &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>View/Edit Profile</h2>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Go &raquo;</a></p>
+    </div>
 
     <div class="row">
         <p>Enter if you're available:</p>
@@ -49,5 +73,5 @@
 
 
     </div>
-
-}
+    }
+    

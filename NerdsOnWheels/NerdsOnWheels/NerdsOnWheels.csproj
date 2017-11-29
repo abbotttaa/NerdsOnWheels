@@ -405,6 +405,7 @@
     <Content Include="Views\Customers\CustomerHome.cshtml" />
     <Content Include="Views\Technicians\EmployeeRegister.cshtml" />
     <Content Include="Views\Account\EmployeeRegister.cshtml" />
+    <Content Include="Views\Technicians\ShowOpenTickets.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
